@@ -10,11 +10,11 @@
 carpentry: "lc"
 
 # Overall title for pages.
-title: "Library Carpentry: Introduction to Git"
+title: "Library Carpentry: Introduction to Git with Graphical Interfaces"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
-life_cycle: "stable"
+life_cycle: "pre-alpha"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
