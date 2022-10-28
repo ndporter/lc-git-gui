@@ -7,7 +7,7 @@ questions:
 - "What is GitHub?"
 objectives:
 - "recognize why version control is useful"
-- "distinguish between Git and GitHub"
+- "distinguish between Git, GitHub, and GithHub Desktop"
 keypoints:
 - "Version control helps track changes to files and projects"
 - "Git and GitHub are not the same"
@@ -43,12 +43,22 @@ Git was originally developed to help software developers work collaboratively on
 * Enables you to contribute to, collaborate on, and support digital research projects 
 * Enables you to control changes to your files over time without keeping multiple copies of those files
 
-**_GitHub_** on the other hand is a popular website for hosting and sharing Git repositories remotely. It offers a web interface and provides functionality and a mixture of both free and paid services for working with such repositories. The majority of the content that GitHub hosts is open source software, though increasingly it is being used for other projects such as open access journals (e.g. [Journal of Open Source Software](https://joss.theoj.org/)), blogs, and regularly updated text books.  In addition to GitHub, there are other Git hosting services that offer many similar features such as [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/) and [Gitee](https://gitee.com/).
+**_GitHub_** on the other hand is a popular website for hosting and sharing Git repositories remotely. It offers a web interface and provides functionality and a mixture of both free and paid services for working with such repositories. The majority of the content that GitHub hosts is open source software, though increasingly it is being used for other projects such as open access journals (e.g. [Journal of Open Source Software](https://joss.theoj.org/)), blogs, and regularly updated open educational resources such as text books.  In addition to GitHub, there are other Git hosting services that offer many similar features such as [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/) and [Gitee](https://gitee.com/).
 
 *How can GitHub help with work in libraries?* 
 * A place to discover and reuse ("fork") a huge amount of openly licensed digital projects and open source software
 * A new and alternative means for publishing content online. Any GitHub repository can have its own project website, blog and wiki using GitHub Pages.  
 
+### What is GitHub Desktop?
+
+To make the language even more confusing, we'll be using GitHub Desktop, a Graphical User Interface (GUI) that allows you to perform most Git actions on a Windows or Mac computer using menus and selectors rather than typed commands in a text-only window. In some cases, you can do everything you need on the GitGub website itself, but using GitHub Desktop provides flexibility to work locally and make changes more easily, while simplifying the process of tracking and collaborating on your files.
+
+GitHub Desktop may require extra steps to use with a Git hosting service other than GitHub. There are other desktop Git interfaces as well, but GitHub desktop is the most widely used and Git workflows will be similar across any option.
+
+*How can GitHub Desktop help with work in libraries?*
+* Simplifies tracking changes and versions for Git projects
+* Reducs the need to remember and type commands
+* Displays current version and previous versions graphically and interactively to simplify managing changes
 
 ### Uses in a Library Context
 
