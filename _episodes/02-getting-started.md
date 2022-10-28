@@ -1,5 +1,5 @@
 ---
-title: "Getting started with Git"
+title: "Getting started with Git using Github Desktop"
 teaching: 25
 exercises: 0
 questions:
@@ -16,102 +16,23 @@ keypoints:
 - "Git uses a two-step process to record changes to your files. Changes to files must first be added to the staging area, then committed to the Git repository."
 ---
 
-### Setting up Git
+### Setting up Github Desktop
 
-When we use Git on a new computer for the first time,
-we need to configure a few things. The basic elements of a configuration for Git are:
+When we use Github Desktop on a new computer for the first time,
+we need to configure a few things. The first step is to log into Github Desktop so it can access information and repositories tied to our account.
 
-*   your name and email address,
-*   what your preferred text editor is,
-*   set the name of your default branch (branches are an important component of Git that we will cover later)
-*   and that you want to use these settings globally (i.e. for every project).
+To do so, log into Github on your browser, then open Github Desktop and click "Sign into Github.com". This should open a new tab in your browser
+asking you to authorize Github Desktop. 
 
-First, we will tell Git our user name and email. For this lesson, we will be interacting with [GitHub](https://github.com/) and so we want to use the same email address we used when we set up our GitHub account. If you are concerned about privacy, please review [GitHub’s instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
+**Insert git_desktop_permission.png here**
 
-It is possible you may have already set up Git on your computer in the past, so let's start by checking if there are any existing configurations.   
+Once you click authorize, you will need to reenter your Github password then choose whether to use the name and email on your Github account (recommended) or change them.
 
-Open your shell terminal window and type:
+After this, you should see a start screen that resembles the image below. If you haven't used Github before, you won't see any repositories, and the colors and style may vary based on your operating system and theme.
 
-~~~
-$ git config --list
-~~~
-{: .language-bash}
+**Insert git_desktop_get_started.png here**
 
-On MacOS, without any configuration your output might look like this:
-
-~~~
-credential.helper=osxkeychain
-~~~
-{: .output}
-
-On Windows, without any configuration your output might look like this:
-~~~
-diff.astextplain.textconv=astextplain
-filter.lfs.clean=git-lfs clean -- %f
-filter.lfs.smudge=git-lfs smudge -- %f
-filter.lfs.process=git-lfs filter-process
-filter.lfs.required=true
-http.sslbackend=openssl
-http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
-core.autocrlf=true
-core.fscache=true
-core.symlinks=false
-pull.rebase=false
-credential.helper=manager-core
-credential.https://dev.azure.com.usehttppath=true
-init.defaultbranch=main
-~~~
-{: .output}
-
-Assuming you have not set up Git on your computer before, let's go ahead and add our information to our configuration now. 
-
-Please note: For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub’s instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
-
-Type these two commands into your shell, replacing `Your Name` and the email address with your own:
-
-~~~
-$ git config --global user.name "Your Name"
-$ git config --global user.email "yourname@domain.name"
-~~~
-{: .language-bash}
-
-If you enter the commands correctly, the shell will merely return a command prompt and no messages. To check your work, ask Git what your configuration is using the same command as above:
-
-~~~
-git config --list
-~~~
-{: .language-bash}
-
-~~~
-user.name=Your Name
-user.email=yourname@librarian.la
-~~~
-{: .output}
-
-Let's also set our default text editor. A text editor is necessary with some of your Git work and the default from Git is vim, which is a great tool, but not useful if you're not familiar with it. 
-Any text editor can be made default by adding the correct file path and command line options (see [GitHub help](https://help.github.com/articles/associating-text-editors-with-git/)).
-However, the simplest `core.editor` values are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux.
-
-For example:
-
-~~~
-$ git config --global core.editor "notepad"
-~~~
-{: .language-bash }
-
-~~~
-$ git config --global core.editor "nano -w"
-~~~
-{: .language-bash}
-
-Lastly, we need to set the name of our default branch to `main.`
-
-~~~
-$ git config --global init.defaultBranch main
-~~~
-{: .language-bash }
-
-The `init.defaultBranch` value configures git to set the default branch to `main` instead of `master`.
+## STOPPED HERE
 
 ### Creating a repository
 
