@@ -6,4 +6,4 @@ title: Setup
 If you haven't done so already, to follow this lesson you will need to:
 
 1. Create a free [GitHub account](https://github.com/join) and confirm your email.
-2. Download and install Git for your operating system: [https://git-scm.com/downloads](https://git-scm.com/downloads) (*Note:* Git for Windows comes bundled with the Git BASH terminal that allows you to use UNIX-style commands on Windows)
+2. Download and install Github Desktop for your operating system: [https://desktop.github.com](https://desktop.github.com). For Mac users with Apple Silicon (M1 or M2) chips, there is a separate [download link](https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64) but the main Mac version should still work if you're not sure what chip you have.
