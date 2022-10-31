@@ -1,5 +1,5 @@
 ---
-title: "Getting started with Git using Github Desktop"
+title: "Getting started with Git using GitHub Desktop"
 teaching: 25
 exercises: 0
 questions:
@@ -16,23 +16,30 @@ keypoints:
 - "Git uses a two-step process to record changes to your files. Changes to files must first be added to the staging area, then committed to the Git repository."
 ---
 
-### Setting up Github Desktop
+### Setting up GitHub Desktop
 
-When we use Github Desktop on a new computer for the first time,
+When we use GitHub Desktop on a new computer for the first time,
 we need to configure a few things. The first step is to log into Github Desktop so it can access information and repositories tied to our account.
 
-To do so, log into Github on your browser, then open Github Desktop and click "Sign into Github.com". This should open a new tab in your browser
-asking you to authorize Github Desktop. 
+To do so, log into GitHub on your browser, then open Github Desktop and click "Sign into Github.com". This should open a new tab in your browser
+asking you to authorize GitHub Desktop. 
 
 **Insert git_desktop_permission.png here**
 
-Once you click authorize, you will need to reenter your Github password then choose whether to use the name and email on your Github account (recommended) or change them.
+Once you click authorize, you will need to reenter your GitHub password then choose whether to use the name and email on your GitHub account (recommended) or change them.
 
-After this, you should see a start screen that resembles the image below. If you haven't used Github before, you won't see any repositories, and the colors and style may vary based on your operating system and theme.
+After this, you should see a start screen that resembles the image below. If you haven't used Github before, you won't see any repositories, but we'll fix that soon enough.
 
 **Insert git_desktop_get_started.png here**
 
-## STOPPED HERE
+> ### Options and Preferences
+> Optionally, before going on, take a minute to browse some of the general settings for GitHub Desktop (`GitHib Desktop - Preferences` on Mac; 
+> `File - Options` on Windows). The `Accounts` screen should show your logged-in GitHub account. 
+> Your name and email should be correct (and generally match your GitHub account) in `Git` and `main` should be selected as the default branch name.
+> `master` used to be the default for most Git repositories but was replaced due to association with slavery. 
+> `Appearance` also allows you to choose light or dark themes. 
+> Click `Save` if you changed anything and close out of the options window before continuing.
+{: .callout}
 
 ### Creating a repository
 
