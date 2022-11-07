@@ -32,7 +32,8 @@ After this, you should see a start screen that resembles the image below. If you
 
 **Insert git_desktop_get_started.png here**
 
-> ### Options and Preferences
+> ## Options and Preferences
+> 
 > Optionally, before going on, take a minute to browse some of the general settings for GitHub Desktop (`GitHib Desktop - Preferences` on Mac; 
 > `File - Options` on Windows). The `Accounts` screen should show your logged-in GitHub account. 
 > Your name and email should be correct (and generally match your GitHub account) in `Git` and `main` should be selected as the default branch name.
@@ -45,29 +46,25 @@ After this, you should see a start screen that resembles the image below. If you
 
 A Git **repository** is a data structure used to track changes to a set of project files over time. Repositories are
 stored within the same directory as these project files, in a hidden directory called `.git`. We can create a new git
-repository either by using [GitHub's web interface](https://github.com/new), or via the command line. Let's use the command line to create a git
-repository for the experiments that we're going to do today.
+repository either by using [GitHub's web interface](https://github.com/new) or in GitHub Desktop. 
+Let's use the the app to create a git repository for the experiments that we're going to do today. Start by clicking the `Create a New Repository on your Hard Drive` button.
 
-First, we will create a new directory for our project and enter that directory.
-<!explain commands as we go along>
-
-~~~
-$ mkdir hello-world
-$ cd hello-world
-~~~
-{: .language-bash }
+The name we give to the repository will be created as a new directory within the directory chosen as `Local Path`. In general, try to give repositories short descriptive names using only letters, numbers, dashes, and underscores. For now, name your repository `hello-world`, leave the other options unchanged, and click `Create Repository`.
 
 ### Using Git
 
 One of the main barriers to getting started with Git is understanding the terminology necessary to executing commands. Although some of the language used in Git aligns with common-use words in English, other terms are not so clear. The best way to learn Git terminology - which consists of a number of verbs such as add, commit and push (preceded by the word 'git') - is to use it, which is what we will be doing during this lesson. We will explain these commands as we proceed from setting up a new version-controlled project to publishing our own website.
 
 On a command line interface, Git commands are written as `git verb options`,
-where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. So let's get started with our setup.
+where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. So let's get started with our setup. 
+While we won't use the command line today, there will be notes here in case you end up using it later, so you can connect what we're doing to standard Git terminology.
 
-We will now create an empty git repository to track changes to our project. To do this we will use the git **init** command,
-which is simply short for *initialise*.
+The `Create Repository` button first creates a new directory for our project, then **initializes** an empty git repository to track changes to our project. 
+On the command line, this corresponds to the **mkdir** (make directory) and **git init** (initialize) commands.
 
 ~~~
+$ mkdir hello-world
+$ cd hello-world
 $ git init
 ~~~
 {: .language-bash }
