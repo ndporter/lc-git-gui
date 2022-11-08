@@ -93,113 +93,58 @@ Clicking the `History` tab on the left allows us to view a list of changes over 
 If we click back on the `Changes` tab and choose `Show in Finder` or `Show in Explorer`, the repository might seem empty; however, GitHub Desktop has created a hidden `.git` directory and a hidden `.gitattributes` file. In general, files that start with a `.` are hidden because they are not meant to be edited by most users. Hidden files will still be included in the repository when we upload to GitHub, and can be viewed on the local computer by changing options.
 
 
-### Displaying the current project's status
-
-We can run the `git status` command to display the current state of a project. Let's do that now.
-
-~~~
-$ git status
-~~~
-{: .language-bash }
-~~~
-On branch main
-No commits yet
-nothing to commit (create/copy files and use "git add" to track)
-~~~
-{: .output}
-
-The output tells us that we are on the main branch (more on this later) and that we have nothing to commit (no
-unsaved changes).
-
-
 ### Two steps: Adding and committing
 
 We will now create and save our first project file. This is a two-step process. First, we **add** any files for which
 we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage
 process gives us fine-grained control over what should and should not be included in a particular commit.
 
-Let's create a new file using the `touch` command, which is a quick way to create an empty file.
+Let's create a new `readme.md` file to document basic information about our project that will also display on the repository homepage on GitHub. Open a text editor (like `Notepad` in Windows or `TextEdit` on Mac) and create a new file with the following text:
 
 ~~~
-$ touch index.md
-~~~
-{: .language-bash }
+# Hello World!
 
-The `.md` extension above signifies that we have chosen to use the Markdown format, a lightweight markup language with plain text formatting syntax. We will explore Markdown a bit later.
-
-Let's check the status of our project again.
-
-~~~
-$ git status
-~~~
-{: .language-bash }
-~~~
-On branch main
-No commits yet
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-    index.md
-
-nothing added to commit but untracked files present (use "git add" to track)
-~~~
-{: .output}
-
-This status is telling us that git has noticed a new file in our directory that we are not yet tracking. With colourised
-output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to
-index.md, we use `git add`.
-
-~~~
-$ git add index.md
+This repository is practice for Library Carpentry.
 ~~~
 {: .language-bash }
 
-This adds our Markdown file to the **staging area** (the area where git checks for file changes). To confirm this we want to use `git status` again.
+
+The `.md` extension above signifies that we have chosen to use the Markdown format, a lightweight markup language with plain text formatting syntax. The
+hash character is one way of writing a header with Markdown. We will explore Markdown a bit later.
+
+Save the file in your project directory with the name `readme.md`. If you're using `TextEdit` on Mac, you may have to save it with the wrong format (`Rich Text Document` is fine for now) and then open the directory in finder, rename it to remove the RTF and confirm that you want to change it to an `.md` file.
+
+If you're going to be doing a lot of text file creation or editing, it's worth taking the time to set up a more powerful text editor, like [Visual Studio Code](https://code.visualstudio.com/) which can interact directly with GitHub Desktop and can automatically show your repository files.
+
+For now, let's check the status of our project again. Without doing anything in GitHub Desktop after creating the file, here's what mine now looks like:
+
+![GitHub Desktop readme.md](../fig/git_desktop_readme.png)
+
+First we see the status on the left showing "1 changed file" and listing the file.
+This status is telling us that Git has noticed a new file in our directory. 
+By default, GitHub Desktop has assumed we want to track this file and performed the `Add` action. 
+Files with changes added will have a check mark to their left in this list. 
+If you were using Git from the command line, you would use `git add` like this:
 
 ~~~
-$ git status
-~~~
-{: .language-bash }
-~~~
-On branch main
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-    new file:   index.md
-~~~
-{: .output}
-
-If we are using colourised output, we will see that the filename has changed colour (from red to green). Git also tells us that there
-is a new file to be committed but, before we do that, let's add some text to the file.
-
-We will open the file `index.md` with any text editor we have at hand (e.g. Notepad on Windows or TextEdit on Mac OSX) and enter `# Hello, world!`. The
-hash character is one way of writing a header with Markdown. Now, let's save the file within the text editor and check if Git
-has spotted the changes.
-
-~~~
-$ git status
+$ git add readme.md
 ~~~
 {: .language-bash }
-~~~
-On branch main
 
-No commits yet
+This adds our Markdown file to the **staging area** (the area where git checks for file changes). 
 
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
+On the right, we see some odd-looking lines of text. 
+This are shows changes in the highlighted file on the left, called the `diff` (differences) in command line terminology. 
+Each line that starts with a `+` was added since the last commit; lines with a `-` at the start were removed. 
+If a line was changed, the old version will display a `-` and the new version a `+`.
+Since we just created this file, all lines start with a `+`. 
 
-	new file:   index.md
+You'll probably also notice in the image here that there are ten lines even though we only created three!
+I created the file in `TextEdit` on my Mac and had to save it as a `.rtf` file before changing the format.
+As a result, there are extra lines at the start with information from the other format.
+Common document editors like Microsoft Word add even more artifacts to files, which is one reason programmers prefer to work in text editors.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   index.md
-~~~
-{: .output}
+### **STOPPED HERE***
 
 This lets us know that git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add
 the new version of the file to the staging area.
