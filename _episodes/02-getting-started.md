@@ -24,13 +24,13 @@ we need to configure a few things. The first step is to log into Github Desktop 
 To do so, log into GitHub on your browser, then open Github Desktop and click "Sign into Github.com". This should open a new tab in your browser
 asking you to authorize GitHub Desktop. 
 
-**Insert git_desktop_permission.png here**
+![GitHub Desktop Permissions Request](../fig/git_desktop_permissions.png)
 
 Once you click authorize, you will need to reenter your GitHub password then choose whether to use the name and email on your GitHub account (recommended) or change them.
 
 After this, you should see a start screen that resembles the image below. If you haven't used Github before, you won't see any repositories, but we'll fix that soon enough.
 
-**Insert git_desktop_get_started.png here**
+![GitHub Desktop Start Screen](../fig/git_desktop_get_started.png)
 
 > ## Options and Preferences
 > 
@@ -78,7 +78,7 @@ The `hello-world` directory is now a git repository.
 
 In GitHub Desktop, you should see something like the screen below. We'll learn more about the elements of the interface and repository soon, but the below discussion provides a quick overview of what you see in the interface.
 
-**Insert "No local changes" screenshot**
+![GitHub Desktop New Repository](../fig/git_desktop_new_repository.png)
 
 At the top, you can see that we are in the `hello-world` repository and on the `main` (default) branch. 
 
@@ -88,7 +88,7 @@ Since we aren't actively viewing a file, the main (right) area in the window pro
 
 Clicking the `History` tab on the left allows us to view a list of changes over time in our repository (see below). We have only made a single commit (or update) to our repository, when we initialized it, which shows up on the left with a commit message ("initial commit"), user, and date. Each file that was changed, added, or deleted in that commit is visible in the middle column (here, just `.gitattributes`), and clicking on one shows each row that was changed, added, or deleted in that file during that commit.
 
-**Insert "history" screenshot**
+![GitHub Desktop History](../fig/git_desktop_history.png)
 
 If we click back on the `Changes` tab and choose `Show in Finder` or `Show in Explorer`, the repository might seem empty; however, GitHub Desktop has created a hidden `.git` directory and a hidden `.gitattributes` file. In general, files that start with a `.` are hidden because they are not meant to be edited by most users. Hidden files will still be included in the repository when we upload to GitHub, and can be viewed on the local computer by changing options.
 
