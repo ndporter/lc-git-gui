@@ -53,7 +53,7 @@ The name we give to the repository will be created as a new directory within the
 
 ### Using Git
 
-One of the main barriers to getting started with Git is understanding the terminology necessary to executing commands. Although some of the language used in Git aligns with common-use words in English, other terms are not so clear. The best way to learn Git terminology - which consists of a number of verbs such as add, commit and push (preceded by the word 'git') - is to use it, which is what we will be doing during this lesson. We will explain these commands as we proceed from setting up a new version-controlled project to publishing our own website.
+One of the main barriers to getting started with Git is understanding the terminology necessary to execute commands. Although some of the language used in Git aligns with common-use words in English, other terms are not so clear. The best way to learn Git terminology - which consists of a number of verbs such as add, commit and push - is to use it, which is what we will be doing during this lesson. We will explain these commands as we proceed from setting up a new version-controlled project to publishing our own website.
 
 On a command line interface, Git commands are written as `git verb options`,
 where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. So let's get started with our setup. 
@@ -76,13 +76,22 @@ Initialized empty Git repository in <your file path>/hello-world/.git/
 
 The `hello-world` directory is now a git repository.
 
-If we run the `ls` command now (`ls` lists the content of the `hello-world`
-directory), the repository might seem empty; however, adding the `-a` flag
-for all files via `ls -a` will show all hidden files, which in this case
-includes the new hidden directory `.git`. Flags can simply be thought of as command line options that can be added to shell commands.
+In GitHub Desktop, you should see something like the screen below. We'll learn more about the elements of the interface and repository soon, but the below discussion provides a quick overview of what you see in the interface.
 
-Note that whenever we use git via the command line, we need to preface each command (or verb) with `git`, so that the computer knows
-we are trying to get git to do something, rather than some other program.
+**Insert "No local changes" screenshot**
+
+At the top, you can see that we are in the `hello-world` repository and on the `main` (default) branch. 
+
+On the left, you should see a `Changes` tab showing no changes, because we haven't done anything beyond create the repository yet. 
+As we add or change files, they'll appear here, and the options in the bottom left will help us track those changes when we're ready.
+Since we aren't actively viewing a file, the main (right) area in the window provides some information and suggestions on what we might want to do next.
+
+Clicking the `History` tab on the left allows us to view a list of changes over time in our repository (see below). We have only made a single commit (or update) to our repository, when we initialized it, which shows up on the left with a commit message ("initial commit"), user, and date. Each file that was changed, added, or deleted in that commit is visible in the middle column (here, just `.gitattributes`), and clicking on one shows each row that was changed, added, or deleted in that file during that commit.
+
+**Insert "history" screenshot**
+
+If we click back on the `Changes` tab and choose `Show in Finder` or `Show in Explorer`, the repository might seem empty; however, GitHub Desktop has created a hidden `.git` directory and a hidden `.gitattributes` file. In general, files that start with a `.` are hidden because they are not meant to be edited by most users. Hidden files will still be included in the repository when we upload to GitHub, and can be viewed on the local computer by changing options.
+
 
 ### Displaying the current project's status
 
