@@ -144,64 +144,52 @@ I created the file in `TextEdit` on my Mac and had to save it as a `.rtf` file b
 As a result, there are extra lines at the start with information from the other format.
 Common document editors like Microsoft Word add even more artifacts to files, which is one reason programmers prefer to work in text editors.
 
-### **STOPPED HERE***
-
-This lets us know that git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add
-the new version of the file to the staging area.
-
-~~~
-$ git add index.md
-~~~
-{: .language-bash }
-
 Now we are ready to  **commit** our first changes.
 Commit is similar to 'saving' a file to Git.
 However, compared to saving, a commit provides a lot more information about the changes we have made,
 and this information will remain visible to us later.
 
+Before you commit the changes, write a brief **commit message**, a short, descriptive, and specific summary of what we did to help us remember later on without having to look at the actual changes.
+GitHub Desktop will suggest a message which, in this case ("Create readme.md") is probably enough and can be left. You can also add a longer description if you wish.
 
-~~~
-$ git commit -m 'Add index.md'
-~~~
-{: .language-bash }
-~~~
-[main (root-commit) e9e8fd3] Add index.md
- 1 file changed, 1 insertion(+)
- create mode 100644 index.md
-~~~
-{: .output}
+When ready to commit, click the `Commit to main` button.
+Notice that, once again, the main window says "No local changes".
+This is because the changes we did make have been tracked (by adding) and recorded (with the commit) and are no longer "staged".
 
-We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'.
-We can
-also see the commit message 'Add index.md', which we added by using the `-m` flag after `git commit`.
-The commit message is used to record a short, descriptive, and specific summary of what we did to help us remember later on without having to look at the actual changes.
-If we just run `git commit` without the `-m` option, Git will launch nano (or whatever other editor we configured as `core.editor`)
-so that we can write a longer message.
-
-Having made a commit, we now have a permanent record of what was changed,
-and git has also recorded some additional metadata: who made the commit (you!) and when the commit was made (timestamp). You are building a mini-history of your process of working with the files in this directory. 
+Insteaad, we now have a permanent record of what was changed, and git has also recorded some additional metadata: 
+who made the commit (you!) and when the commit was made (timestamp). You are building a mini-history of your process of working with the files in this directory. 
 
 > ## More on the Staging Area
 >
 > If you think of Git as taking snapshots of changes over the life of a project,
-> `git add` specifies *what* will go in a snapshot
+> `add` specifies *what* will go in a snapshot
 > (putting things in the staging area),
-> and `git commit` then *actually takes* the snapshot, and
-> makes a permanent record of it (as a commit).
-> If you don't have anything staged when you type `git commit`,
-> Git will prompt you to use `git commit -a` or `git commit --all`,
+> and `commit` then *actually takes* the snapshot, and
+> makes a permanent record of it.
+> Github Desktop differs from Git in that it automatically adds every change,
+> unless you specifically remove it by unchecking it in the list,
 > which is kind of like gathering *everyone* for the picture!
 > However, it's almost always better to
 > explicitly add things to the staging area, because you might
 > commit changes you forgot you made. (Going back to snapshots,
 > you might get the extra with incomplete makeup walking on
-> the stage for the snapshot because you used `-a`!)
-> Try to stage things manually,
+> the stage for the snapshot because you didn't check each file)
+> It's also typically best to keep commits small and closely related,
+> so changes are easy to find later, particularly if they break another part of the project.
+> Before executing a `commit`, double check both the files and the changes within them,
+> and uncheck any files you're not ready to `commit`
 > or you might find yourself searching for "git undo commit" more
 > than you would like!
 {: .callout}
 
 ![The Git Staging Area](../fig/git-staging-area.svg)
+
+If your `readme.md` file ended up with lots of random characters, now is a good time to find or download a different text editor,
+remove everything but the 3 lines of text we intended to add, save the file, and make another commit with the changes.
+A good commit message might be `Remove extra readme.md lines` with more detail in the optional description as below
+(note how the lines in the main window use +/- and coloring to indicate changes):
+
+![GitHub Desktop readme.md Changes](../fig/git_desktop_readme_changes.png)
 
 At the moment, our changes are only recorded locally, on our computer. If we wanted to
 work collaboratively with someone else they would have no way of seeing what we've done.
